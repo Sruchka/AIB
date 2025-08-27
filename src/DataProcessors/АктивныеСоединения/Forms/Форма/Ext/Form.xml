@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Активные соединения</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<ProgressBarField name="ИндикаторПроцесса" id="63">
+			<DataPath>Объект.ИндикаторПроцесса</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ShowPercent>true</ShowPercent>
+			<ContextMenu name="ИндикаторПроцессаКонтекстноеМеню" id="64"/>
+			<ExtendedTooltip name="ИндикаторПроцессаРасширеннаяПодсказка" id="65"/>
+		</ProgressBarField>
+		<Pages name="Страницы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Page name="ГруппаАктивныеСоединения" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активные соединения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАктивныеСоединенияРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Table name="АктивныеСоединения" id="29">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.АктивныеСоединения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АктивныеСоединенияКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="АктивныеСоединенияКоманднаяПанель" id="31">
+								<ChildItems>
+									<Button name="АктивныеСоединенияОбновитьАктивныеСеансы" id="66">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьАктивныеСеансы</CommandName>
+										<ExtendedTooltip name="АктивныеСоединенияОбновитьАктивныеСеансыРасширеннаяПодсказка" id="67"/>
+									</Button>
+									<Popup name="АктивныеСоединенияГруппа1" id="73">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Управление сеансами</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="АктивныеСоединенияГруппа1РасширеннаяПодсказка" id="74"/>
+										<ChildItems>
+											<Button name="АктивныеСоединенияОтключитьВыбранныеСеансы" id="75">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОтключитьВыбранныеСеансы</CommandName>
+												<ExtendedTooltip name="АктивныеСоединенияОтключитьВыбранныеСеансыРасширеннаяПодсказка" id="76"/>
+											</Button>
+											<Button name="АктивныеСоединенияОтключитьВсеСеансы" id="77">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОтключитьВсеСеансы</CommandName>
+												<ExtendedTooltip name="АктивныеСоединенияОтключитьВсеСеансыРасширеннаяПодсказка" id="78"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="АктивныеСоединенияРасширеннаяПодсказка" id="32"/>
+							<SearchStringAddition name="АктивныеСоединенияСтрокаПоиска" id="33">
+								<AdditionSource>
+									<Item>АктивныеСоединения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктивныеСоединенияСтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="АктивныеСоединенияСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АктивныеСоединенияСостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>АктивныеСоединения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АктивныеСоединенияСостояниеПросмотраКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="АктивныеСоединенияСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АктивныеСоединенияУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>АктивныеСоединения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АктивныеСоединенияУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="АктивныеСоединенияУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АктивныеСоединенияНомерСтроки" id="42">
+									<DataPath>Объект.АктивныеСоединения.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияНомерСтрокиКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="АктивныеСоединенияНомерСтрокиРасширеннаяПодсказка" id="44"/>
+								</LabelField>
+								<InputField name="АктивныеСоединенияИнформационнаяБаза" id="70">
+									<DataPath>Объект.АктивныеСоединения.ИнформационнаяБаза</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияИнформационнаяБазаКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="АктивныеСоединенияИнформационнаяБазаРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияПользователь" id="45">
+									<DataPath>Объект.АктивныеСоединения.Пользователь</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияПользовательКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="АктивныеСоединенияПользовательРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияИмяПриложения" id="48">
+									<DataPath>Объект.АктивныеСоединения.ИмяПриложения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияИмяПриложенияКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="АктивныеСоединенияИмяПриложенияРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияИмяКомпьютера" id="51">
+									<DataPath>Объект.АктивныеСоединения.ИмяКомпьютера</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияИмяКомпьютераКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="АктивныеСоединенияИмяКомпьютераРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияНачалоСоединения" id="54">
+									<DataPath>Объект.АктивныеСоединения.НачалоСоединения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияНачалоСоединенияКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="АктивныеСоединенияНачалоСоединенияРасширеннаяПодсказка" id="56"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияНомерСеанса" id="57">
+									<DataPath>Объект.АктивныеСоединения.НомерСеанса</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияНомерСеансаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="АктивныеСоединенияНомерСеансаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="АктивныеСоединенияНомерСоединения" id="60">
+									<DataPath>Объект.АктивныеСоединения.НомерСоединения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АктивныеСоединенияНомерСоединенияКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="АктивныеСоединенияНомерСоединенияРасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТаблицаОбработки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица обработки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаТаблицаОбработкиРасширеннаяПодсказка" id="7"/>
+					<ChildItems>
+						<Table name="ТаблицаОбработки" id="8">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ТаблицаОбработки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаОбработкиКонтекстноеМеню" id="9"/>
+							<AutoCommandBar name="ТаблицаОбработкиКоманднаяПанель" id="10">
+								<ChildItems>
+									<Button name="ТаблицаОбработкиОбновитьАктивныеСеансы" id="68">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьАктивныеСеансы</CommandName>
+										<ExtendedTooltip name="ТаблицаОбработкиОбновитьАктивныеСеансыРасширеннаяПодсказка" id="69"/>
+									</Button>
+									<Button name="ТаблицаОбработкиПодбор" id="79">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<ExtendedTooltip name="ТаблицаОбработкиПодборРасширеннаяПодсказка" id="80"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаОбработкиРасширеннаяПодсказка" id="11"/>
+							<SearchStringAddition name="ТаблицаОбработкиСтрокаПоиска" id="12">
+								<AdditionSource>
+									<Item>ТаблицаОбработки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОбработкиСтрокаПоискаКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="ТаблицаОбработкиСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаОбработкиСостояниеПросмотра" id="15">
+								<AdditionSource>
+									<Item>ТаблицаОбработки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОбработкиСостояниеПросмотраКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ТаблицаОбработкиСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаОбработкиУправлениеПоиском" id="18">
+								<AdditionSource>
+									<Item>ТаблицаОбработки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОбработкиУправлениеПоискомКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ТаблицаОбработкиУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТаблицаОбработкиНомерСтроки" id="21">
+									<DataPath>Объект.ТаблицаОбработки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаОбработкиНомерСтрокиКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ТаблицаОбработкиНомерСтрокиРасширеннаяПодсказка" id="23"/>
+								</LabelField>
+								<InputField name="ТаблицаОбработкиИнформационнаяБаза" id="24">
+									<DataPath>Объект.ТаблицаОбработки.ИнформационнаяБаза</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаОбработкиИнформационнаяБазаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ТаблицаОбработкиИнформационнаяБазаРасширеннаяПодсказка" id="26"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.АктивныеСоединения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьАктивныеСеансы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить активные сеансы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить активные сеансы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьАктивныеСеансы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтключитьВыбранныеСеансы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить выбранные сеансы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить выбранные сеансы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardCreateTempTableDropQuery</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтключитьВыбранныеСеансы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтключитьВсеСеансы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить все сеансы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить все сеансы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтключитьВсеСеансы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Подбор</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

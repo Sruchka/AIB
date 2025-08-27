@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Данные архива</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<ChildItemsWidth>Equal</ChildItemsWidth>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДатаСобытия" id="1">
+			<DataPath>Запись.ДатаСобытия</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ДатаСобытияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаСобытияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ИнформационнаяБаза" id="4">
+			<DataPath>Запись.ИнформационнаяБаза</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипАрхива" id="23">
+			<DataPath>Запись.ТипАрхива</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ТипАрхиваКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ТипАрхиваРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="ПутьКАрхиву" id="7">
+			<DataPath>Запись.ПутьКАрхиву</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу архива</v8:content>
+				</v8:item>
+			</Title>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПутьКАрхивуКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПутьКАрхивуРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="StartChoice">ПутьКАрхивуНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаФайлАрхива" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа файл архива</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа файл архива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФайлАрхиваРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияФайлАрхиваЗагружен" id="10">
+					<HorizontalStretch>true</HorizontalStretch>
+					<TextColor>web:Green</TextColor>
+					<Font bold="true" kind="AutoFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл архива загружен в хранилище</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияФайлАрхиваЗагруженКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДекорацияФайлАрхиваЗагруженРасширеннаяПодсказка" id="12"/>
+				</LabelDecoration>
+				<Button name="СохранитьДвоичныеДанныеАрхиваВФайл" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СохранитьДвоичныеДанныеАрхиваВФайл</CommandName>
+					<ExtendedTooltip name="СохранитьДвоичныеДанныеАрхиваВФайлРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ЗагрузитьДвоичныеДанныеАрхиваИзФайла" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗагрузитьДвоичныеДанныеАрхиваИзФайла</CommandName>
+					<ExtendedTooltip name="ЗагрузитьДвоичныеДанныеАрхиваИзФайлаРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="УдалитьДвоичныеДанныеАрхива" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УдалитьДвоичныеДанныеАрхива</CommandName>
+					<ExtendedTooltip name="УдалитьДвоичныеДанныеАрхиваРасширеннаяПодсказка" id="20"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ХранилищеАрхивов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьДвоичныеДанныеАрхиваВФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить двоичные данные архива в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить двоичные данные архива в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.EndEdit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьДвоичныеДанныеАрхиваВФайл</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьДвоичныеДанныеАрхива" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить двоичные данные архива их ранилища</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить двоичные данные архива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьДвоичныеДанныеАрхива</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьДвоичныеДанныеАрхиваИзФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить двоичные данные архива из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить двоичные данные архива из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SettingsStorage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьДвоичныеДанныеАрхиваИзФайла</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

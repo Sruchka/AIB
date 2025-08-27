@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаНастройки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаОбщие" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общие</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОбщиеРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="81">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="82"/>
+							<ChildItems>
+								<InputField name="ВерсияПрограммы" id="78">
+									<DataPath>НаборКонстант.ВерсияПрограммы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ВерсияПрограммыКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ВерсияПрограммыРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<Button name="ПроверитьОбновления" id="83">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьОбновления</CommandName>
+									<ExtendedTooltip name="ПроверитьОбновленияРасширеннаяПодсказка" id="84"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация2" id="33">
+							<Font bold="true" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если задан каталог обновлений, то загружаемые релизы обновлений будут в него сохраняться </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
+						<InputField name="КаталогОбновлений" id="30">
+							<DataPath>НаборКонстант.КаталогОбновлений</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="КаталогОбновленийКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="КаталогОбновленийРасширеннаяПодсказка" id="32"/>
+							<Events>
+								<Event name="StartChoice">КаталогОбновленийНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ОтображатьТрассировкуСообщений" id="73">
+							<DataPath>НаборКонстант.ОтображатьТрассировкуСообщений</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтображатьТрассировкуСообщенийКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ОтображатьТрассировкуСообщенийРасширеннаяПодсказка" id="75"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАрхив" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архив</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа архив</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаАрхивРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<CheckBoxField name="ХранитьВБазеСсылкиНаАрхивы" id="7">
+							<DataPath>НаборКонстант.ХранитьВБазеСсылкиНаВнешниеФайлыАрхивов</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранитьВБазеСсылкиНаАрхивыКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ХранитьВБазеСсылкиНаАрхивыРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<InputField name="ВариантХраненияАрхиваВБазе" id="10">
+							<DataPath>НаборКонстант.ВариантХраненияФайлаАрхиваВБазе</DataPath>
+							<ContextMenu name="ВариантХраненияАрхиваВБазеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ВариантХраненияАрхиваВБазеРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ОсновнойКаталогАрхива" id="1">
+							<DataPath>НаборКонстант.ОсновнойКаталогАрхива</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ОсновнойКаталогАрхиваКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОсновнойКаталогАрхиваРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="StartChoice">ОсновнойКаталогАрхиваНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПараметрыИТС" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры ИТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры ИТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыИТСРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="27">
+							<Font bold="true" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизиты доступа к ресурсу users.v8.1c.ru для загрузки релизов обновлений</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="29"/>
+						</LabelDecoration>
+						<InputField name="ЛогинИТС" id="21">
+							<DataPath>НаборКонстант.ЛогинИТС</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ЛогинИТСКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ЛогинИТСРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<InputField name="ПарольИТС" id="24">
+							<DataPath>НаборКонстант.ПарольИТС</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПарольИТСКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПарольИТСРасширеннаяПодсказка" id="26"/>
+						</InputField>
+						<CheckBoxField name="ЗагружатьОбновленияКонфигурацийАвтоматически" id="52">
+							<DataPath>НаборКонстант.ЗагружатьРелизыОбновленийАвтоматически</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗагружатьОбновленияКонфигурацийАвтоматическиКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ЗагружатьОбновленияКонфигурацийАвтоматическиРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">ЗагружатьОбновленияКонфигурацийАвтоматическиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ЗагружатьРелизыОбновленийВХранилище" id="55">
+							<DataPath>НаборКонстант.ЗагружатьРелизыОбновленийВХранилище</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗагружатьРелизыОбновленийВХранилищеКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ЗагружатьРелизыОбновленийВХранилищеРасширеннаяПодсказка" id="57"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="РегламентныеОперации" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентные операции</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регламентные операции</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РегламентныеОперацииРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<CheckBoxField name="ВыполнятьРегламентнуюОбработкуДанных" id="67">
+							<DataPath>НаборКонстант.ВыполнятьРегламентнуюОбработкуДанных</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыполнятьРегламентнуюОбработкуДанныхКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ВыполнятьРегламентнуюОбработкуДанныхРасширеннаяПодсказка" id="69"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПоддержкаПроекта" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поддержка проекта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поддержка проекта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПоддержкаПроектаРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Pages name="Поддержка" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поддержка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поддержка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ПоддержкаРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<Page name="Yandex" id="60">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Яндекс</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Yandex</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="YandexРасширеннаяПодсказка" id="61"/>
+									<ChildItems>
+										<HTMLDocumentField name="ПолеДонатYandex" id="41">
+											<DataPath>ПолеДонатYandex</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ПолеДонатYandexКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ПолеДонатYandexРасширеннаяПодсказка" id="43"/>
+										</HTMLDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="WebMoney" id="62">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Web money</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Web money</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="WebMoneyРасширеннаяПодсказка" id="63"/>
+									<ChildItems>
+										<HTMLDocumentField name="ПолеДонатWebMoney" id="64">
+											<DataPath>ПолеДонатWebMoney</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ПолеДонатWebMoneyКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ПолеДонатWebMoneyРасширеннаяПодсказка" id="66"/>
+										</HTMLDocumentField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПолеДонатYandex" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле донат yandex</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеДонатWebMoney" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле донат yandex</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьОбновления" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить обновления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить обновления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьОбновления</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.19">
+	<Item id="48614e32-84e2-4daa-9c80-409e72b27095">
+		<Name>АдминистрированиеИнформационныхБаз</Name>
+		<Code>000000004</Code>
+		<Description>АдминистрированиеИнформационныхБаз</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="4e693fb7-c745-46d0-a0db-32adb3e91bde">
+		<Name>АрендаИУправлениеНедвижимостью</Name>
+		<Code>000000003</Code>
+		<Description>АрендаИУправлениеНедвижимостью</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="af1e255a-ce74-4a10-ba18-8cf3b83ca7b7">
+		<Name>БухгалтерияПредприятия</Name>
+		<Code>000000002</Code>
+		<Description>БухгалтерияПредприятия</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="243328e7-3b67-4b07-86d9-2e152a3366a1">
+		<Name>ЗарплатаИУправлениеПерсоналом</Name>
+		<Code>000000001</Code>
+		<Description>ЗарплатаИУправлениеПерсоналом</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

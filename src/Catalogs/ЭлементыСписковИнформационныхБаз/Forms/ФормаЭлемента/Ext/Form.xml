@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="40">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Владелец" id="7">
+					<DataPath>Объект.Owner</DataPath>
+					<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Родитель" id="10">
+			<DataPath>Объект.Parent</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИнформационнаяБаза" id="13">
+			<DataPath>Объект.ИнформационнаяБаза</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ИнформационнаяБазаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="WS" id="49">
+			<DataPath>Объект.WS</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расположение информационной базы на веб-сервере. Данное значение имеет более высокий приоритет, чем параметры подключения ИБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ContextMenu name="WSКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="WSРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<UsualGroup name="Группа3" id="44">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<InputField name="ClientConnectionSpeed" id="22">
+					<DataPath>Объект.ClientConnectionSpeed</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ClientConnectionSpeedКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ClientConnectionSpeedРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="App" id="25">
+					<DataPath>Объект.App</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="AppКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="AppРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="DefaultApp" id="46">
+					<DataPath>Объект.DefaultApp</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="DefaultAppКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="DefaultAppРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="Version" id="28">
+					<DataPath>Объект.Version</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="VersionКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="VersionРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="AdditionalParameters" id="31">
+			<DataPath>Объект.AdditionalParameters</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="AdditionalParametersКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="AdditionalParametersРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="StartChoice">AdditionalParametersНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа2" id="42">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="External" id="19">
+					<DataPath>Объект.External</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ExternalКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ExternalРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="OrderInTree" id="37">
+					<DataPath>Объект.OrderInTree</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="OrderInTreeКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="OrderInTreeРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="OrderInList" id="34">
+					<DataPath>Объект.OrderInList</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="OrderInListКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="OrderInListРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ID" id="16">
+			<DataPath>Объект.ID</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="IDКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="IDРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЭлементыСписковИнформационныхБаз</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

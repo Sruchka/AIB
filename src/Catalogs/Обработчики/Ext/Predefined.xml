@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.19">
+	<Item id="aab632e2-23f1-40b6-8ba4-8f037b11537c">
+		<Name>ИнформацияОБлокировкахSQL</Name>
+		<Code>000000004</Code>
+		<Description>Информация о блокировках SQL</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9eaff15a-403b-4ca7-a5ea-857ad7f4847d">
+		<Name>ОбновлениеИББухгалтерия20</Name>
+		<Code>000000001</Code>
+		<Description>Обновление ИБ для Бухгалтерия 2.0</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="ffe63825-00c2-4ef5-9d2a-9270fbb801f3">
+		<Name>ОбновлениеИББухгалтерия30</Name>
+		<Code>000000002</Code>
+		<Description>Обновление ИБ для Бухгалтерия 3.0</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="edf99996-2f76-4e78-ab28-997bfa5485c4">
+		<Name>ПослеДобавленияПользователяБП30</Name>
+		<Code>000000003</Code>
+		<Description>После добавления пользователя ИБ Бухгалетрия 3.0</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

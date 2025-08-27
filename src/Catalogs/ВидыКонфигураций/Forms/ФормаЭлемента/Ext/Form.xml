@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="12"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="9">
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="13"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="7">
+					<TextColor>#000080</TextColor>
+					<Font bold="true" kind="AutoFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование должно соответствовать имени конфигурации, как оно задано в конфигураторе</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="Декорация1ExtendedTooltip" id="14"/>
+				</LabelDecoration>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="15"/>
+					<Events>
+						<Event name="OnChange">НаименованиеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Синоним" id="21">
+					<DataPath>Объект.Синоним</DataPath>
+					<ContextMenu name="СинонимКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СинонимРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Редакция" id="24">
+			<DataPath>Объект.Редакция</DataPath>
+			<WarningOnEdit>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При указании номера редакции подбор релиза обновления будет выполнятсья только при наличии в его номере указанного номера редакции. Изменение данного значения повлияет на логику подбора доступных релизов обновлений!</v8:content>
+				</v8:item>
+			</WarningOnEdit>
+			<ContextMenu name="РедакцияКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="РедакцияРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<CheckBoxField name="ОтчключитьАвтоматическуюЗагрузкуОбновлений" id="18">
+			<DataPath>Объект.ОтчключитьАвтоматическуюЗагрузкуОбновлений</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключает загрузку релизов обновлений при активации регламентного задания по загрузке обновлений.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтчключитьАвтоматическуюЗагрузкуОбновленийКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ОтчключитьАвтоматическуюЗагрузкуОбновленийРасширеннаяПодсказка" id="20"/>
+		</CheckBoxField>
+		<InputField name="ПрефиксАрхива" id="5">
+			<DataPath>Объект.ПрефиксАрхива</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПрефиксАрхиваКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПрефиксАрхиваExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="Комментарий" id="10">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="17"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыКонфигураций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,17 @@
+﻿@echo off
+rem Реквизиты учетной записи, прод которой будет выполняться запуск службы
+set SrvUserName=%УчетнаяЗаписьДляЗапускаСлужбыИмя%
+set SrvUserPwd=%УчетнаяЗаписьДляЗапускаСлужбыПароль%
+rem Реквизиты кластера
+set CtrlPort=%КластерПорт%
+set RASPort=%RasПорт%
+set AgentName=%АгентИмя%
+set SrvcName="1C:Enterprise 8.3 Remote Server"
+set BinPath="\"C:\Program Files\1cv8\%ВерсияПлатформы%\bin\ras.exe\" cluster --service --port=%RASPort% %AgentName%:%CtrlPort%"
+set Desctiption="1C:Enterprise 8.3 Remote Server"
+sc stop %SrvcName%
+Ping -n 4 127.0.0.1>nul
+sc delete %SrvcName%
+sc create %SrvcName% binPath= %BinPath% start= auto obj= %SrvUserName% password= %SrvUserPwd% displayname= %Desctiption%
+sc start %SrvcName%
+pause

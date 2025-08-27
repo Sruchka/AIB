@@ -1,0 +1,610 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКнопкиНавигации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки навигации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиНавигацииРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Button name="Назад" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Назад</CommandName>
+					<ExtendedTooltip name="НазадРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<Button name="Далее" id="5">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Далее</CommandName>
+					<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="6"/>
+				</Button>
+				<CheckBoxField name="ВыполнятьВФоне" id="103">
+					<DataPath>Объект.ВыполнятьВФоне</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполнятьВФонеКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ВыполнятьВФонеРасширеннаяПодсказка" id="105"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагружатьТолькоНовые" id="131">
+					<DataPath>Объект.ЗагружатьТолькоНовые</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьТолькоНовыеКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="ЗагружатьТолькоНовыеРасширеннаяПодсказка" id="133"/>
+					<Events>
+						<Event name="OnChange">ЗагружатьТолькоНовыеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<ProgressBarField name="ИндикаторПроцесса" id="106">
+			<DataPath>Объект.ИндикаторПроцесса</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ShowPercent>true</ShowPercent>
+			<ContextMenu name="ИндикаторПроцессаКонтекстноеМеню" id="107"/>
+			<ExtendedTooltip name="ИндикаторПроцессаРасширеннаяПодсказка" id="108"/>
+		</ProgressBarField>
+		<Pages name="ГруппаСтраницы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<Page name="ГруппаНачало" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начало</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начало</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНачалоРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="61">
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите виды конфигураций, по которым необходимо проверить обновления.
+Операция анализа доступных обновлений может занимать продолжительное время.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="63"/>
+						</LabelDecoration>
+						<Table name="ВидыКонфигураций" id="51">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ВидыКонфигураций</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВидыКонфигурацийКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="ВидыКонфигурацийКоманднаяПанель" id="53">
+								<ChildItems>
+									<Button name="ВидыКонфигурацийЗаполнитьПоВсемВидамКонфигурации" id="101">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоВсемВидамКонфигурации</CommandName>
+										<ExtendedTooltip name="ВидыКонфигурацийЗаполнитьПоВсемВидамКонфигурацииРасширеннаяПодсказка" id="102"/>
+									</Button>
+									<Button name="ВидыКонфигурацийПодбор" id="111">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<ExtendedTooltip name="ВидыКонфигурацийПодборРасширеннаяПодсказка" id="112"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВидыКонфигурацийРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="ВидыКонфигурацийСтрокаПоиска" id="113">
+								<AdditionSource>
+									<Item>ВидыКонфигураций</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыКонфигурацийСтрокаПоискаКонтекстноеМеню" id="114"/>
+								<ExtendedTooltip name="ВидыКонфигурацийСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВидыКонфигурацийСостояниеПросмотра" id="116">
+								<AdditionSource>
+									<Item>ВидыКонфигураций</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыКонфигурацийСостояниеПросмотраКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="ВидыКонфигурацийСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВидыКонфигурацийУправлениеПоиском" id="119">
+								<AdditionSource>
+									<Item>ВидыКонфигураций</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыКонфигурацийУправлениеПоискомКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ВидыКонфигурацийУправлениеПоискомРасширеннаяПодсказка" id="121"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ВидыКонфигурацийПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ВидыКонфигурацийНомерСтроки" id="55">
+									<DataPath>Объект.ВидыКонфигураций.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВидыКонфигурацийНомерСтрокиКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ВидыКонфигурацийНомерСтрокиРасширеннаяПодсказка" id="57"/>
+								</LabelField>
+								<InputField name="ВидыКонфигурацийВидКонфигурации" id="58">
+									<DataPath>Объект.ВидыКонфигураций.ВидКонфигурации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВидыКонфигурацийВидКонфигурацииКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ВидыКонфигурацийВидКонфигурацииРасширеннаяПодсказка" id="60"/>
+									<Events>
+										<Event name="OnChange">ВидыКонфигурацийВидКонфигурацииПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВидыКонфигурацийРедакция" id="137">
+									<DataPath>Объект.ВидыКонфигураций.Редакция</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ContextMenu name="ВидыКонфигурацийРедакцияКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ВидыКонфигурацийРедакцияРасширеннаяПодсказка" id="139"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПроверитьОбновления" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проверить обновления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проверить обновления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПроверитьОбновленияРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="109">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<CheckBoxField name="ЗагружатьРелизыОбновленийВХранилище" id="98">
+									<DataPath>Объект.ЗагружатьРелизыОбновленийВХранилище</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗагружатьРелизыОбновленийВХранилищеКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ЗагружатьРелизыОбновленийВХранилищеРасширеннаяПодсказка" id="100"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ДоступныеОбновления" id="64">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ДоступныеОбновления</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоступныеОбновленияКонтекстноеМеню" id="65"/>
+							<AutoCommandBar name="ДоступныеОбновленияКоманднаяПанель" id="66">
+								<ChildItems>
+									<ButtonGroup name="ДоступныеОбновленияГруппа1" id="91">
+										<ExtendedTooltip name="ДоступныеОбновленияГруппа1РасширеннаяПодсказка" id="92"/>
+										<ChildItems>
+											<Button name="ДоступныеОбновленияПометитьВсе" id="87">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПометитьВсе</CommandName>
+												<ExtendedTooltip name="ДоступныеОбновленияПометитьВсеРасширеннаяПодсказка" id="88"/>
+											</Button>
+											<Button name="ДоступныеОбновленияСнятьВсе" id="89">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьВсе</CommandName>
+												<ExtendedTooltip name="ДоступныеОбновленияСнятьВсеРасширеннаяПодсказка" id="90"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ДоступныеОбновленияГруппа2" id="93">
+										<ExtendedTooltip name="ДоступныеОбновленияГруппа2РасширеннаяПодсказка" id="94"/>
+										<ChildItems>
+											<Button name="ДоступныеОбновленияЗагрузитьОбновления" id="85">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗагрузитьОбновления</CommandName>
+												<ExtendedTooltip name="ДоступныеОбновленияЗагрузитьОбновленияРасширеннаяПодсказка" id="86"/>
+											</Button>
+											<Button name="ДоступныеОбновленияПроверитьНаличиеОбновлений" id="83">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПроверитьНаличиеОбновлений</CommandName>
+												<ExtendedTooltip name="ДоступныеОбновленияПроверитьНаличиеОбновленийРасширеннаяПодсказка" id="84"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДоступныеОбновленияРасширеннаяПодсказка" id="67"/>
+							<SearchStringAddition name="ДоступныеОбновленияСтрокаПоиска" id="122">
+								<AdditionSource>
+									<Item>ДоступныеОбновления</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоступныеОбновленияСтрокаПоискаКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ДоступныеОбновленияСтрокаПоискаРасширеннаяПодсказка" id="124"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоступныеОбновленияСостояниеПросмотра" id="125">
+								<AdditionSource>
+									<Item>ДоступныеОбновления</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоступныеОбновленияСостояниеПросмотраКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="ДоступныеОбновленияСостояниеПросмотраРасширеннаяПодсказка" id="127"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоступныеОбновленияУправлениеПоиском" id="128">
+								<AdditionSource>
+									<Item>ДоступныеОбновления</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоступныеОбновленияУправлениеПоискомКонтекстноеМеню" id="129"/>
+								<ExtendedTooltip name="ДоступныеОбновленияУправлениеПоискомРасширеннаяПодсказка" id="130"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ДоступныеОбновленияПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ДоступныеОбновленияНомерСтроки" id="68">
+									<DataPath>Объект.ДоступныеОбновления.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоступныеОбновленияНомерСтрокиКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДоступныеОбновленияНомерСтрокиРасширеннаяПодсказка" id="70"/>
+								</LabelField>
+								<CheckBoxField name="ДоступныеОбновленияЗагрузить" id="80">
+									<DataPath>Объект.ДоступныеОбновления.Загрузить</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДоступныеОбновленияЗагрузитьКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ДоступныеОбновленияЗагрузитьРасширеннаяПодсказка" id="82"/>
+								</CheckBoxField>
+								<InputField name="ДоступныеОбновленияВидКонфигурации" id="71">
+									<DataPath>Объект.ДоступныеОбновления.ВидКонфигурации</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоступныеОбновленияВидКонфигурацииКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ДоступныеОбновленияВидКонфигурацииРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="ДоступныеОбновленияРедакция" id="134">
+									<DataPath>Объект.ДоступныеОбновления.Редакция</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ContextMenu name="ДоступныеОбновленияРедакцияКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ДоступныеОбновленияРедакцияРасширеннаяПодсказка" id="136"/>
+								</InputField>
+								<InputField name="ДоступныеОбновленияНомерРелиза" id="74">
+									<DataPath>Объект.ДоступныеОбновления.НомерРелиза</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоступныеОбновленияНомерРелизаКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ДоступныеОбновленияНомерРелизаРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="ДоступныеОбновленияСетевойКаталог" id="77">
+									<DataPath>Объект.ДоступныеОбновления.СетевойКаталог</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоступныеОбновленияСетевойКаталогКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ДоступныеОбновленияСетевойКаталогРасширеннаяПодсказка" id="79"/>
+								</InputField>
+								<InputField name="ДоступныеОбновленияUpdInfo" id="95">
+									<DataPath>Объект.ДоступныеОбновления.UpdInfo</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоступныеОбновленияUpdInfoКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ДоступныеОбновленияUpdInfoРасширеннаяПодсказка" id="97"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаОбновлений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияЗагрузить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияВидКонфигурации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияНомерРелиза</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияСетевойКаталог</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияUpdInfo</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ДоступныеОбновления.Загрузить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияЗагрузить</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияВидКонфигурации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияНомерРелиза</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияСетевойКаталог</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеОбновленияUpdInfo</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ДоступныеОбновления.Загрузить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Далее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Forward</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Далее</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Назад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Back</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Назад</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьНаличиеОбновлений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие обновлений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие обновлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSourceTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьНаличиеОбновлений</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьОбновления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить обновления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить обновления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьОбновления</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометитьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьВсе</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьВсе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьВсе</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПоВсемВидамКонфигурации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по всем видам конфигурации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьПоВсемВидамКонфигурации</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Подбор</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

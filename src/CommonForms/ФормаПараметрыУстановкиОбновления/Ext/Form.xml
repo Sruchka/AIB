@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИнформационнаяБаза" id="1">
+			<DataPath>ИнформационнаяБаза</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ХранилищеКонфигураций" id="33">
+			<DataPath>ХранилищеКонфигураций</DataPath>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипСервера">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыСерверов.EnumValue.ХранилищеКонфигураций</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ХранилищеКонфигурацийКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ХранилищеКонфигурацийРасширеннаяПодсказка" id="35"/>
+			<Events>
+				<Event name="OnChange">ХранилищеКонфигурацийПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПользовательХранилища" id="36">
+			<DataPath>ПользовательХранилища</DataPath>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипУчетнойЗаписи">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыУчетныхЗаписей.EnumValue.УчетнаяЗаписьХранилищаКонфигураций</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ПользовательХранилищаКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ПользовательХранилищаРасширеннаяПодсказка" id="38"/>
+		</InputField>
+		<InputField name="РелизОбновления" id="7">
+			<DataPath>РелизОбновления</DataPath>
+			<ContextMenu name="РелизОбновленияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РелизОбновленияРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="StartChoice">РелизОбновленияНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПравилаОбъединения" id="39">
+			<DataPath>ПравилаОбъединения</DataPath>
+			<ContextMenu name="ПравилаОбъединенияКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ПравилаОбъединенияРасширеннаяПодсказка" id="41"/>
+			<Events>
+				<Event name="StartChoice">ПравилаОбъединенияНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Обработчик" id="4">
+			<DataPath>Обработчик</DataPath>
+			<ChoiceParameters>
+				<app:item name="Отбор.ТипОбработчика">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыОбработчиков.EnumValue.Обработчик1СПредприятие</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ОбработчикКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОбработчикРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="10">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры обработки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<CheckBoxField name="ВыгружатьАрхив" id="12">
+					<DataPath>ВыгружатьАрхив</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгружатьАрхивКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВыгружатьАрхивРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="OnChange">ВыгружатьАрхивПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="АвтоматическиПерезаписыватьАрхив" id="15">
+					<DataPath>АвтоматическиПерезаписыватьАрхив</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АвтоматическиПерезаписыватьАрхивКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="АвтоматическиПерезаписыватьАрхивРасширеннаяПодсказка" id="17"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтключатьСеансы" id="18">
+					<DataPath>ОтключатьСеансы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтключатьСеансыКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ОтключатьСеансыРасширеннаяПодсказка" id="20"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОткрыватьБазуПослеОбновления" id="21">
+					<DataPath>ОткрыватьБазуПослеОбновления</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОткрыватьБазуПослеОбновленияКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ОткрыватьБазуПослеОбновленияРасширеннаяПодсказка" id="23"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТихийРежим" id="30">
+					<DataPath>ТихийРежим</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТихийРежимКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ТихийРежимРасширеннаяПодсказка" id="32"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="24">
+			<EnableContentChange>true</EnableContentChange>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<Button name="OK" id="26">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.OK</CommandName>
+					<ExtendedTooltip name="OKРасширеннаяПодсказка" id="27"/>
+				</Button>
+				<Button name="Отмена" id="28">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="29"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИнформационнаяБаза" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИнформационныеБазы</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="АвтоматическиПерезаписыватьАрхив" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически перезаписывать архив</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Обработчик" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработчик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Обработчики</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОткрыватьБазуПослеОбновления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать базу после обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РелизОбновления" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Релиз обновления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.РелизыОбновлений</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтключатьСеансы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключать сеансы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьАрхив" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать архив</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТихийРежим" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тихий режим (отключение предупреждений об ошибках)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыГрупповойОбработки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды групповой обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыГрупповойОбработки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранилищеКонфигураций" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище конфигураций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сервера</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательХранилища" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УчетныеЗаписи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравилаОбъединения" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила объединения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПравилаОбъединения</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="OK" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>OK</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Close</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Отмена</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

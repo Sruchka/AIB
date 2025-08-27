@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор варианта загрузки архива</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаХранилищеАрхивов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище архивов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа хранилище архивов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаХранилищеАрхивовРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<CheckBoxField name="ЗагружатьИзАрхиваВХранилище" id="28">
+					<DataPath>ЗагружатьИзАрхиваВХранилище</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружатьИзАрхиваВХранилищеКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЗагружатьИзАрхиваВХранилищеРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+				<Table name="ХранилищеАрхивов" id="11">
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<HeightInTableRows>10</HeightInTableRows>
+					<ChoiceMode>true</ChoiceMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ХранилищеАрхивов</DataPath>
+					<RowPictureDataPath>ХранилищеАрхивов.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="ХранилищеАрхивовКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="ХранилищеАрхивовКоманднаяПанель" id="13"/>
+					<ExtendedTooltip name="ХранилищеАрхивовРасширеннаяПодсказка" id="14"/>
+					<SearchStringAddition name="ХранилищеАрхивовСтрокаПоиска" id="34">
+						<AdditionSource>
+							<Item>ХранилищеАрхивов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ХранилищеАрхивовСтрокаПоискаКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ХранилищеАрхивовСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ХранилищеАрхивовСостояниеПросмотра" id="37">
+						<AdditionSource>
+							<Item>ХранилищеАрхивов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ХранилищеАрхивовСостояниеПросмотраКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ХранилищеАрхивовСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ХранилищеАрхивовУправлениеПоиском" id="40">
+						<AdditionSource>
+							<Item>ХранилищеАрхивов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ХранилищеАрхивовУправлениеПоискомКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ХранилищеАрхивовУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ХранилищеАрхивовВыбор</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ХранилищеАрхивовИнформационнаяБаза" id="15">
+							<DataPath>ХранилищеАрхивов.ИнформационнаяБаза</DataPath>
+							<ContextMenu name="ХранилищеАрхивовИнформационнаяБазаКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ХранилищеАрхивовИнформационнаяБазаРасширеннаяПодсказка" id="17"/>
+						</LabelField>
+						<LabelField name="ХранилищеАрхивовТипАрхива" id="43">
+							<DataPath>ХранилищеАрхивов.ТипАрхива</DataPath>
+							<ContextMenu name="ХранилищеАрхивовТипАрхиваКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ХранилищеАрхивовТипАрхиваРасширеннаяПодсказка" id="45"/>
+						</LabelField>
+						<LabelField name="ХранилищеАрхивовДатаСобытия" id="18">
+							<DataPath>ХранилищеАрхивов.ДатаСобытия</DataPath>
+							<ContextMenu name="ХранилищеАрхивовДатаСобытияКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ХранилищеАрхивовДатаСобытияРасширеннаяПодсказка" id="20"/>
+						</LabelField>
+						<CheckBoxField name="ХранилищеАрхивовАрхивЗагруженВХранилище" id="31">
+							<DataPath>ХранилищеАрхивов.АрхивЗагруженВХранилище</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранилищеАрхивовАрхивЗагруженВХранилищеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ХранилищеАрхивовАрхивЗагруженВХранилищеРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+						<LabelField name="ХранилищеАрхивовПутьКАрхиву" id="21">
+							<DataPath>ХранилищеАрхивов.ПутьКАрхиву</DataPath>
+							<ContextMenu name="ХранилищеАрхивовПутьКАрхивуКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ХранилищеАрхивовПутьКАрхивуРасширеннаяПодсказка" id="23"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВнешнийФайл" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешний архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа внешний файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаВнешнийФайлРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<CheckBoxField name="ЗагружаемВнешнийФайл" id="1">
+					<DataPath>ЗагружаемВнешнийФайл</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагружаемВнешнийФайлКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ЗагружаемВнешнийФайлРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ЗагружаемВнешнийФайлПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="Группа1" id="26">
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="ПутьКАрхиву" id="4">
+							<DataPath>ПутьКАрхиву</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПутьКАрхивуКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПутьКАрхивуРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="StartChoice">ПутьКАрхивуНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<Button name="ВыбратьВнешнийФайл" id="24">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыбратьВнешнийФайл</CommandName>
+							<ExtendedTooltip name="ВыбратьВнешнийФайлРасширеннаяПодсказка" id="25"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗагружаемВнешнийФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из внешнего файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКАрхиву" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к архиву</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранилищеАрхивов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище архивов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ХранилищеАрхивов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ИнформационнаяБаза</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСобытия</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ИнформационнаяБаза</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗагружатьИзАрхиваВХранилище" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать из архива в хранилище (будет выполнено, если архив ранее был загружен)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьВнешнийФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать внешний файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьВнешнийФайл</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Close</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

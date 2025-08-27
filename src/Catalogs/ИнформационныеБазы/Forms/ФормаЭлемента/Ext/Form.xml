@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа2" id="34">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа2ExtendedTooltip" id="61"/>
+			<ChildItems>
+				<Page name="Группа3" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3ExtendedTooltip" id="62"/>
+					<ChildItems>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодExtendedTooltip" id="63"/>
+						</InputField>
+						<InputField name="Наименование" id="3">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="64"/>
+						</InputField>
+						<InputField name="ВидКонфигурации" id="5">
+							<DataPath>Объект.ВидКонфигурации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВидКонфигурацииКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ВидКонфигурацииExtendedTooltip" id="65"/>
+						</InputField>
+						<InputField name="РелизОбновления" id="7">
+							<DataPath>Объект.РелизОбновления</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="РелизОбновленияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="РелизОбновленияExtendedTooltip" id="66"/>
+							<Events>
+								<Event name="OnChange">РелизОбновленияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТипОбновления" id="93">
+							<DataPath>Объект.ТипОбновления</DataPath>
+							<ContextMenu name="ТипОбновленияКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ТипОбновленияРасширеннаяПодсказка" id="95"/>
+						</InputField>
+						<InputField name="СтатусИнформационнойБазы" id="138">
+							<DataPath>Объект.СтатусИнформационнойБазы</DataPath>
+							<ContextMenu name="СтатусИнформационнойБазыКонтекстноеМеню" id="139"/>
+							<ExtendedTooltip name="СтатусИнформационнойБазыРасширеннаяПодсказка" id="140"/>
+						</InputField>
+						<InputField name="СтатусПоддержки" id="27">
+							<DataPath>Объект.СтатусПоддержки</DataPath>
+							<ContextMenu name="СтатусПоддержкиКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="СтатусПоддержкиExtendedTooltip" id="67"/>
+						</InputField>
+						<CheckBoxField name="ОтключитьПроверкуСоответствияРелизов" id="96">
+							<DataPath>Объект.ОтключитьПроверкуСоответствияРелизов</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтключитьПроверкуСоответствияРелизовКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ОтключитьПроверкуСоответствияРелизовРасширеннаяПодсказка" id="98"/>
+							<Events>
+								<Event name="OnChange">ОтключитьПроверкуСоответствияРелизовПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="Группа4" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа4ExtendedTooltip" id="68"/>
+					<ChildItems>
+						<InputField name="ТипИБ" id="9">
+							<DataPath>Объект.ТипИБ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТипИБКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ТипИБExtendedTooltip" id="69"/>
+							<Events>
+								<Event name="OnChange">ТипИБПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ИмяКаталогИБ" id="11">
+							<DataPath>Объект.ИмяКаталогИБ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИмяКаталогИБКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ИмяКаталогИБExtendedTooltip" id="70"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогИБНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогИБОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="СерверИБ" id="13">
+							<DataPath>Объект.СерверИБ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СерверИБКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СерверИБExtendedTooltip" id="71"/>
+						</InputField>
+						<InputField name="Пользователь" id="15">
+							<DataPath>Объект.Пользователь</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипУчетнойЗаписи">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТипыУчетныхЗаписей.EnumValue.УчетнаяЗаписьИБ</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ПользовательКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПользовательExtendedTooltip" id="72"/>
+							<Events>
+								<Event name="StartChoice">ПользовательНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="РелизТехнологическоПлатформы" id="116">
+							<DataPath>Объект.РелизТехнологическойПлатформы</DataPath>
+							<ContextMenu name="РелизТехнологическоПлатформыКонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="РелизТехнологическоПлатформыРасширеннаяПодсказка" id="118"/>
+						</InputField>
+						<InputField name="ХранилищеКонфигураций" id="144">
+							<DataPath>Объект.ХранилищеКонфигураций</DataPath>
+							<ContextMenu name="ХранилищеКонфигурацийКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="ХранилищеКонфигурацийРасширеннаяПодсказка" id="146"/>
+						</InputField>
+						<InputField name="ПользовательХранилища" id="141">
+							<DataPath>Объект.ПользовательХранилища</DataPath>
+							<ContextMenu name="ПользовательХранилищаКонтекстноеМеню" id="142"/>
+							<ExtendedTooltip name="ПользовательХранилищаРасширеннаяПодсказка" id="143"/>
+						</InputField>
+						<CheckBoxField name="АвтоматическоеПодключениеКХранилищуПриЗапускеКонфигуратора" id="147">
+							<DataPath>Объект.АвтоматическоеПодключениеКХранилищуПриЗапускеКонфигуратора</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="АвтоматическоеПодключениеКХранилищуПриЗапускеКонфигуратораКонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="АвтоматическоеПодключениеКХранилищуПриЗапускеКонфигуратораРасширеннаяПодсказка" id="149"/>
+							<Events>
+								<Event name="OnChange">АвтоматическоеПодключениеКХранилищуПриЗапускеКонфигуратораПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="Группа5" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Архивирование</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа5ExtendedTooltip" id="73"/>
+					<ChildItems>
+						<InputField name="ПрефиксАрхива" id="21">
+							<DataPath>Объект.ПрефиксАрхива</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПрефиксАрхиваКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ПрефиксАрхиваExtendedTooltip" id="75"/>
+						</InputField>
+						<InputField name="КаталогАрхива" id="19">
+							<DataPath>Объект.КаталогАрхива</DataPath>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Устанавливается индивидуальный каталог выгрузки для текущей базы</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ChoiceListButton>false</ChoiceListButton>
+							<ContextMenu name="КаталогАрхиваКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КаталогАрхиваExtendedTooltip" id="74"/>
+							<Events>
+								<Event name="StartChoice">КаталогАрхиваНачалоВыбора</Event>
+								<Event name="Opening">КаталогАрхиваОткрытие</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="АвтоматическиПерезаписыватьАрхив" id="23">
+							<DataPath>Объект.АвтоматическиПерезаписыватьАрхив</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="АвтоматическиПерезаписыватьАрхивКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="АвтоматическиПерезаписыватьАрхивExtendedTooltip" id="76"/>
+						</CheckBoxField>
+						<UsualGroup name="Группа10" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действия с архивом</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<CheckBoxField name="ПереопределитьГлобальныеПараметрыДействийСАрхивами" id="110">
+									<DataPath>Объект.ПереопределитьГлобальныеПараметрыДействийСАрхивами</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПереопределитьГлобальныеПараметрыДействийСАрхивамиКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ПереопределитьГлобальныеПараметрыДействийСАрхивамиРасширеннаяПодсказка" id="112"/>
+									<Events>
+										<Event name="OnChange">ПереопределитьГлобальныеПараметрыДействийСАрзивамиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ХранитьВБазеСсылкиНаВнешниеФайлыАрхивов" id="102">
+									<DataPath>Объект.ХранитьВБазеСсылкиНаВнешниеФайлыАрхивов</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ХранитьВБазеСсылкиНаВнешниеФайлыАрхивовКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ХранитьВБазеСсылкиНаВнешниеФайлыАрхивовРасширеннаяПодсказка" id="104"/>
+								</CheckBoxField>
+								<InputField name="ВариантХраненияФайлаАрхиваВБазе" id="105">
+									<DataPath>Объект.ВариантХраненияФайлаАрхиваВБазе</DataPath>
+									<ContextMenu name="ВариантХраненияФайлаАрхиваВБазеКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ВариантХраненияФайлаАрхиваВБазеРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<Table name="ВремяРегламентнойВыгрузки" id="119">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>1/0:9c7faa9b-4320-4178-82c2-17e21708e9c0</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВремяРегламентнойВыгрузкиКонтекстноеМеню" id="120"/>
+									<AutoCommandBar name="ВремяРегламентнойВыгрузкиКоманднаяПанель" id="121"/>
+									<ExtendedTooltip name="ВремяРегламентнойВыгрузкиРасширеннаяПодсказка" id="122"/>
+									<SearchStringAddition name="ВремяРегламентнойВыгрузкиСтрокаПоиска" id="123">
+										<AdditionSource>
+											<Item>ВремяРегламентнойВыгрузки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВремяРегламентнойВыгрузкиСтрокаПоискаКонтекстноеМеню" id="124"/>
+										<ExtendedTooltip name="ВремяРегламентнойВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВремяРегламентнойВыгрузкиСостояниеПросмотра" id="126">
+										<AdditionSource>
+											<Item>ВремяРегламентнойВыгрузки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВремяРегламентнойВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="ВремяРегламентнойВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВремяРегламентнойВыгрузкиУправлениеПоиском" id="129">
+										<AdditionSource>
+											<Item>ВремяРегламентнойВыгрузки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВремяРегламентнойВыгрузкиУправлениеПоискомКонтекстноеМеню" id="130"/>
+										<ExtendedTooltip name="ВремяРегламентнойВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ВремяРегламентнойВыгрузкиНомерСтроки" id="132">
+											<DataPath>1/0:9c7faa9b-4320-4178-82c2-17e21708e9c0/-2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВремяРегламентнойВыгрузкиНомерСтрокиКонтекстноеМеню" id="133"/>
+											<ExtendedTooltip name="ВремяРегламентнойВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="134"/>
+										</LabelField>
+										<InputField name="ВремяРегламентнойВыгрузкиВремя" id="135">
+											<DataPath>1/0:9c7faa9b-4320-4178-82c2-17e21708e9c0/0:de59505b-a5a1-43de-bc55-300c669afc21</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВремяРегламентнойВыгрузкиВремяКонтекстноеМеню" id="136"/>
+											<ExtendedTooltip name="ВремяРегламентнойВыгрузкиВремяРасширеннаяПодсказка" id="137"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ПараметрыSQL" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры SQL</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры SQL</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПараметрыSQLExtendedTooltip" id="77"/>
+					<ChildItems>
+						<InputField name="СерверSQL" id="49">
+							<DataPath>Объект.СерверSQL</DataPath>
+							<ContextMenu name="СерверSQLКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="СерверSQLExtendedTooltip" id="78"/>
+						</InputField>
+						<InputField name="ИмяБДSQL" id="56">
+							<DataPath>Объект.ИмяБДSQL</DataPath>
+							<ContextMenu name="ИмяБДSQLКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ИмяБДSQLExtendedTooltip" id="79"/>
+						</InputField>
+						<UsualGroup name="Группа8" id="53">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8ExtendedTooltip" id="80"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1" id="54">
+									<TextColor>#333399</TextColor>
+									<Font bold="true" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внимание! Каталог архива задается относительно сервера СУБД!</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="Декорация1ExtendedTooltip" id="81"/>
+								</LabelDecoration>
+								<InputField name="КаталогАрхиваSQL" id="51">
+									<DataPath>Объект.КаталогАрхиваSQL</DataPath>
+									<OpenButton>true</OpenButton>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="КаталогАрхиваSQLКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="КаталогАрхиваSQLExtendedTooltip" id="82"/>
+									<Events>
+										<Event name="StartChoice">КаталогАрхиваSQLНачалоВыбора</Event>
+										<Event name="Opening">КаталогАрхиваSQLОткрытие</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа6" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Системные параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа6ExtendedTooltip" id="83"/>
+					<ChildItems>
+						<UsualGroup name="Группа7" id="43">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа7ExtendedTooltip" id="84"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2" id="99">
+									<Font bold="true" kind="AutoFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обрабочик, заданный по умолчанию для текущей базы, вызывается при установке любого обновления. Если обработчик задан, то для текущей базы доступен функционал рекурсивного поиска и установки обновлений. Подробнее об обработчиках можно узнать в справке соответствующего справочника.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="101"/>
+								</LabelDecoration>
+								<CheckBoxField name="Обработчик" id="44">
+									<DataPath>Объект.Обработчик</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбработчикКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ОбработчикРасширеннаяПодсказка" id="86"/>
+									<Events>
+										<Event name="OnChange">ВыполнятьЗапускОбработкиОбновленияИБПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ОткрыватьБазуПослеОбновления" id="25">
+									<DataPath>Объект.ОткрыватьБазуПослеОбновления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОткрыватьБазуПослеОбновленияКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ОткрыватьБазуПослеОбновленияExtendedTooltip" id="85"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="42">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа1ExtendedTooltip" id="87"/>
+							<ChildItems>
+								<CheckBoxField name="УстановленаБлокировкаCеансов" id="31">
+									<DataPath>Объект.УстановленаБлокировкаCеансов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установлена блокировка сеансов</v8:content>
+										</v8:item>
+									</Title>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменение данного параметра може привести к сбоям в работе системы!</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УстановленаБлокировкаCеансовКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="УстановленаБлокировкаCеансовExtendedTooltip" id="88"/>
+									<Events>
+										<Event name="OnChange">УстановленаБлокировкаCеансовПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="УстановленаБлокировкаРегламентныхЗаданий" id="46">
+									<DataPath>Объект.УстановленаБлокировкаРегламентныхЗаданий</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УстановленаБлокировкаРегламентныхЗаданийКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="УстановленаБлокировкаРегламентныхЗаданийExtendedTooltip" id="89"/>
+									<Events>
+										<Event name="OnChange">УстановленаБлокировкаРегламентныхЗаданийПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ВыполняетсяОбработка" id="39">
+									<DataPath>Объект.ВыполняетсяОбработка</DataPath>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменение данного параметра може привести к сбоям в работе системы!</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыполняетсяОбработкаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ВыполняетсяОбработкаExtendedTooltip" id="90"/>
+									<Events>
+										<Event name="OnChange">ВыполняетсяОбработкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа9" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа9ExtendedTooltip" id="91"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="59">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="КомментарийExtendedTooltip" id="92"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ИнформационныеБазы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

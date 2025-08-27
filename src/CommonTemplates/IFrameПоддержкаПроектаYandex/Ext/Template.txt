@@ -1,0 +1,23 @@
+﻿<HTML>
+<HEAD>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<LINK rel=stylesheet type=text/css href="__STYLE__">
+<BASE href="v8config://44ed3ff3-5f17-4b92-869b-b06a43b500d8/mdobject/id83413abb-0bf8-4c96-a35a-f7df4b79c1ef/8eb4fad1-1fa6-403e-970f-2c12dbb43e23">
+<META name=GENERATOR content="MSHTML 11.00.9600.17107">
+<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */
+   }
+</style>
+</HEAD>
+<BODY bgcolor="#F5F5F5">
+<table>
+<tr>
+<td align="center">
+<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=41001730974833&quickpay=donate&payment-type-choice=on&default-sum=500&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0+%D0%B8+%D0%BC%D0%BE%D1%82%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D1%8F+%D0%B4%D0%BB%D1%8F+%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%B3%D0%BE+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F&target-visibility=on&project-name=%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F+%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D1%85+%D0%B1%D0%B0%D0%B7&project-site=http%3A%2F%2Finfostart.ru%2Fpublic%2F193384%2F&button-text=05" width="507" height="133"></iframe>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

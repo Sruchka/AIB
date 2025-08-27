@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Дополнительные параметры запуска</v8:content>
+		</v8:item>
+	</Title>
+	<ChildItemsWidth>Equal</ChildItemsWidth>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="AppAutoCheckMode" id="1">
+			<DataPath>AppAutoCheckMode</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="AppAutoCheckModeКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="AppAutoCheckModeРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="AppAutoCheckVersion" id="4">
+			<DataPath>AppAutoCheckVersion</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="AppAutoCheckVersionКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="AppAutoCheckVersionРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="AU" id="7">
+			<DataPath>AU</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не используется</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string"/>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выводить вопрос об обновлении с использованием административной установки</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/AU+</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не выводить вопроса об обновлении с исользованием административной установки</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/AU-</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="AUКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="AUРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ClearCache" id="10">
+			<DataPath>ClearCache</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ClearCacheКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ClearCacheРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="DisableStartupMessages" id="13">
+			<DataPath>DisableStartupMessages</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="DisableStartupMessagesКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="DisableStartupMessagesРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="RunModeManagedApplication" id="16">
+			<DataPath>RunModeManagedApplication</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="RunModeManagedApplicationКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="RunModeManagedApplicationРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<CheckBoxField name="RunModeOrdinaryApplication" id="19">
+			<DataPath>RunModeOrdinaryApplication</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="RunModeOrdinaryApplicationКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="RunModeOrdinaryApplicationРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="UseHwLicenses" id="22">
+			<DataPath>UseHwLicenses</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не используется</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string"/>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выполнять поиск аппаратного ключа защиты</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/UseHwLicenses+</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не выполнять поиск аппаратного ключа защиты</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/UseHwLicenses-</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="UseHwLicensesКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="UseHwLicensesРасширеннаяПодсказка" id="24"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="WA" id="25">
+			<DataPath>WA</DataPath>
+			<Wrap>false</Wrap>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не используется</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string"/>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Применять Windows-аутентификацию при старте</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/WA+</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Не примененять Windows-аутентификацию при старте</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">/WA-</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="WAКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="WAРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="OnChange">ЗначениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Результат" id="28">
+			<DataPath>Результат</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>Top</TitleLocation>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<Button name="ФормаОК" id="31">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОК</CommandName>
+			<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="32"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="DisableStartupMessages" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Disable startup messages</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="UseHwLicenses" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Use HW licenses</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="WA" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>WA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AppAutoCheckVersion" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>App auto check version</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AppAutoCheckMode" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>App auto check mode</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RunModeOrdinaryApplication" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Run mode ordinary application</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="RunModeManagedApplication" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Run mode managed application</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ClearCache" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Clear cache</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="AU" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>AU</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОК</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

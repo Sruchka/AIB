@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">ИмяПользователяНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПубликацияВебСервиса" id="32">
+			<DataPath>Объект.ПубликацияВебСервиса</DataPath>
+			<ContextMenu name="ПубликацияВебСервисаКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ПубликацияВебСервисаРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<Table name="ДоступныеСпискиОбщихИБ" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДоступныеСпискиОбщихИБ</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДоступныеСпискиОбщихИБКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДоступныеСпискиОбщихИБКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ДоступныеСпискиОбщихИБРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДоступныеСпискиОбщихИБСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДоступныеСпискиОбщихИБ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеСпискиОбщихИБСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДоступныеСпискиОбщихИБСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДоступныеСпискиОбщихИБСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ДоступныеСпискиОбщихИБ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеСпискиОбщихИБСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ДоступныеСпискиОбщихИБСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДоступныеСпискиОбщихИБУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>ДоступныеСпискиОбщихИБ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеСпискиОбщихИБУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ДоступныеСпискиОбщихИБУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДоступныеСпискиОбщихИБНомерСтроки" id="26">
+					<DataPath>Объект.ДоступныеСпискиОбщихИБ.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеСпискиОбщихИБНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДоступныеСпискиОбщихИБНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="ДоступныеСпискиОбщихИБСписокОбщихИБ" id="29">
+					<DataPath>Объект.ДоступныеСпискиОбщихИБ.СписокОбщихИБ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеСпискиОбщихИБСписокОбщихИБКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДоступныеСпискиОбщихИБСписокОбщихИБРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДоступКСпискамИнформационныхБаз</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

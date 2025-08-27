@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПолучитьСкриптЗапускаRAS" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПолучитьСкриптЗапускаRAS</CommandName>
+				<ExtendedTooltip name="ФормаПолучитьСкриптЗапускаRASРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодExtendedTooltip" id="13"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="14"/>
+		</InputField>
+		<InputField name="ТипСервера" id="11">
+			<DataPath>Объект.ТипСервера</DataPath>
+			<ContextMenu name="ТипСервераКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ТипСервераExtendedTooltip" id="15"/>
+			<Events>
+				<Event name="OnChange">ТипСервераПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Каталог" id="19">
+			<DataPath>Объект.Каталог</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="КаталогКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+				<Event name="Opening">КаталогОткрытие</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПортСервера" id="5">
+			<DataPath>Объект.ПортСервера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПортСервераКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПортСервераExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="ПортКластера" id="7">
+			<DataPath>Объект.ПортКластера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПортКластераКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПортКластераExtendedTooltip" id="17"/>
+		</InputField>
+		<InputField name="ПортСервераАдминистрирования" id="25">
+			<DataPath>Объект.ПортСервераАдминистрирования</DataPath>
+			<ContextMenu name="ПортСервераАдминистрированияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПортСервераАдминистрированияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Пользователь" id="9">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПользовательExtendedTooltip" id="18"/>
+			<Events>
+				<Event name="StartChoice">ПользовательНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Комментарий" id="22">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сервера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьСкриптЗапускаRAS" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить скрипт запуска RAS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить скрипт запуска RAS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьСкриптЗапускаRAS</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

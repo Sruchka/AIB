@@ -1,0 +1,26 @@
+﻿<HTML>
+<HEAD>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<LINK rel=stylesheet type=text/css href="__STYLE__">
+<BASE href="v8config://44ed3ff3-5f17-4b92-869b-b06a43b500d8/mdobject/id83413abb-0bf8-4c96-a35a-f7df4b79c1ef/8eb4fad1-1fa6-403e-970f-2c12dbb43e23">
+<META name=GENERATOR content="MSHTML 11.00.9600.17107">
+<style type="text/css">
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    height: 100%; /* Высота таблицы */
+   }
+</style>
+</HEAD>
+<BODY bgcolor="#F5F5F5">
+<table>
+<tr>
+<td align="center">
+
+<!-- Разместите этот код в том месте, где должен отображаться виджет -->
+<iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://events.webmoney.ru/social/widgetDonate.aspx?type=widget&guid=bfa2e3fc-d48c-4696-af25-52acd4c120be&h=169&w=600" border="0" height="169" width="600"></iframe>
+
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

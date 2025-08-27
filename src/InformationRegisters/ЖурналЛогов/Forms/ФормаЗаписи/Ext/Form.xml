@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ИнформационнаяБаза" id="1">
+			<DataPath>Запись.ИнформационнаяБаза</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВидОбработки" id="4">
+			<DataPath>Запись.ВидОбработки</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ВидОбработкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидОбработкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ДатаСобытия" id="7">
+			<DataPath>Запись.ДатаСобытия</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="ДатаСобытияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаСобытияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="ВыполненоУспешно" id="13">
+			<DataPath>Запись.ВыполненоУспешно</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыполненоУспешноКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВыполненоУспешноРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<TextDocumentField name="Сообщение" id="10">
+			<DataPath>Запись.Сообщение</DataPath>
+			<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+			<ContextMenu name="СообщениеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="12"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЖурналЛогов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

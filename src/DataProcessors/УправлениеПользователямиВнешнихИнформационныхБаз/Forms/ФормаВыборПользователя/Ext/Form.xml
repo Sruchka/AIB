@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Width>60</Width>
+	<Height>15</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДоступныеПользователи" id="20">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<SearchOnInput>Use</SearchOnInput>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДоступныеПользователи</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДоступныеПользователиКонтекстноеМеню" id="21"/>
+			<AutoCommandBar name="ДоступныеПользователиКоманднаяПанель" id="22">
+				<ChildItems>
+					<ButtonGroup name="ДоступныеПользователиГруппа1" id="54">
+						<ExtendedTooltip name="ДоступныеПользователиГруппа1РасширеннаяПодсказка" id="55"/>
+						<ChildItems>
+							<Button name="ОК" id="14">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОК</CommandName>
+								<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="15"/>
+							</Button>
+							<Button name="Отмена" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Отмена</CommandName>
+								<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="17"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДоступныеПользователиРасширеннаяПодсказка" id="23"/>
+			<SearchStringAddition name="ДоступныеПользователиСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>ДоступныеПользователи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеПользователиСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ДоступныеПользователиСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДоступныеПользователиСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>ДоступныеПользователи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеПользователиСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ДоступныеПользователиСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДоступныеПользователиУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>ДоступныеПользователи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоступныеПользователиУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="ДоступныеПользователиУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДоступныеПользователиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДоступныеПользователиНомерСтроки" id="24">
+					<DataPath>ДоступныеПользователи.НомерСтроки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>5</Width>
+					<ContextMenu name="ДоступныеПользователиНомерСтрокиКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДоступныеПользователиНомерСтрокиРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="ДоступныеПользователиИнформационнаяБаза" id="33">
+					<DataPath>ДоступныеПользователи.ИнформационнаяБаза</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеПользователиИнформационнаяБазаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ДоступныеПользователиИнформационнаяБазаРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="ДоступныеПользователиСтатусМодификации" id="56">
+					<DataPath>ДоступныеПользователи.СтатусМодификации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>5</Width>
+					<ContextMenu name="ДоступныеПользователиСтатусМодификацииКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ДоступныеПользователиСтатусМодификацииРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ДоступныеПользователиИмя" id="27">
+					<DataPath>ДоступныеПользователи.Имя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеПользователиИмяКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ДоступныеПользователиИмяРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="ДоступныеПользователиПолноеИмя" id="30">
+					<DataPath>ДоступныеПользователи.ПолноеИмя</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеПользователиПолноеИмяКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ДоступныеПользователиПолноеИмяРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="ДоступныеПользователиИмяСтарое" id="36">
+					<DataPath>ДоступныеПользователи.ИмяСтарое</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоступныеПользователиИмяСтароеКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ДоступныеПользователиИмяСтароеРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УправлениеПользователямиВнешнихИнформационныхБаз</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДоступныеПользователи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерСтроки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолноеИмя" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИнформационнаяБаза" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информационная база</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИнформационныеБазы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяСтарое" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя старое</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусМодификации" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус модификации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыМодификации</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИнформационнаяБаза</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиСтатусМодификации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмяСтарое</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДоступныеПользователи.СтатусМодификации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыМодификации.Удален</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИнформационнаяБаза</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиСтатусМодификации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмяСтарое</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДоступныеПользователи.СтатусМодификации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыМодификации.Добавлен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИнформационнаяБаза</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиСтатусМодификации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДоступныеПользователиИмяСтарое</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДоступныеПользователи.СтатусМодификации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СтатусыМодификации.Изменен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightCyan</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
